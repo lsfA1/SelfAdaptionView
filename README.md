@@ -28,3 +28,4 @@ CGSize size = [dataArray[i] boundingRectWithSize:CGSizeMake(SCREEN_WIDTH, 15) op
         NSLog(@"点击:%@",itemName);
     }];
 ```
+![image](https://github.com/lsfA1/SelfAdaptionView/raw/master/SelfAdaptionView/img/01.png)
