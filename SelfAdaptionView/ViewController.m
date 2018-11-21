@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SelfAdaptionView.h"
 
 @interface ViewController ()
 
@@ -16,8 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSArray *Selearr = @[@"这是文本",@"这是文本这是文本",@"这是文本这是文本这是文本",@"这是文本",@"这是文本",@"这是文本",@"这是文本这是文本",@"这是文本",@"这是文本",@"这是文本",@"这是文本",@"这是文本"];
+    SelfAdaptionView *adView=[[SelfAdaptionView alloc]initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.bounds), 0)];
+    [self.view addSubview:adView];
+    [adView createView:Selearr andBlock:^(NSString * _Nonnull itemName) {
+        NSLog(@"点击:%@",itemName);
+    }];
 }
-
 
 @end
